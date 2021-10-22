@@ -5,7 +5,7 @@ public class Motocycle extends Vehicle{
     private String category;
 
     public Motocycle(String model, String manufacturer, String color,
-                     double price, boolean ABS, int power, String category) {
+                     double price, String ABS, int power, String category) {
         super(model, manufacturer, color, price, ABS);
         this.power = power;
         this.category = category;

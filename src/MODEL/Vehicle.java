@@ -5,9 +5,9 @@ public abstract class Vehicle {
     private String manufacturer;
     private String color;
     private double price;
-    private boolean ABS;
+    private String ABS;
 
-    protected Vehicle(String model, String manufacturer, String color, double price, boolean ABS) {
+    protected Vehicle(String model, String manufacturer, String color, double price, String ABS) {
         this.model = model;
         this.manufacturer = manufacturer;
         this.color = color;
@@ -33,7 +33,7 @@ public abstract class Vehicle {
 
     public void setPrice(double price) {this.price = price;}
 
-    public boolean isABS() {return ABS;}
+    public String getABS() {return ABS;}
 
-    public void setABS(boolean ABS) {this.ABS = ABS;}
+    public void setABS(String ABS) {this.ABS = ABS;}
 }

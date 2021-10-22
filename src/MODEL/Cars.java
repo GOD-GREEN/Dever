@@ -5,7 +5,8 @@ public class Cars extends Vehicle{
     private int enginePower;
     private int doors;
 
-    public Cars(String model, String manufacturer, String color, double price, boolean ABS, int HP, int enginePower, int doors) {
+    public Cars(String model, String manufacturer, String color, double price,
+                String ABS, int HP, int enginePower, int doors) {
         super(model, manufacturer, color, price, ABS);
         this.HP = HP;
         this.enginePower = enginePower;

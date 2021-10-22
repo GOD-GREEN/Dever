@@ -3,11 +3,12 @@ package CONTROLL;
 import MODEL.Motocycle;
 
 import java.text.DecimalFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class MotocycleController extends Motocycle implements IVehicle {
     public MotocycleController(String model, String manufacturer, String color,
-                               double price, boolean ABS, int power, String category){
+                               double price, String ABS, int power, String category){
         super(model, manufacturer, color, price, ABS, power, category);
     }
 
@@ -28,7 +29,7 @@ public class MotocycleController extends Motocycle implements IVehicle {
         super.setColor(get.nextLine());
 
         System.out.println("Tem ABS?");
-        super.setABS(get.nextBoolean());
+        super.setABS(get.nextLine());
 
         get.nextLine();
 
@@ -50,7 +51,8 @@ public class MotocycleController extends Motocycle implements IVehicle {
         System.out.println("Fabricante: " + super.getManufacturer());
         System.out.println("Cor: " + super.getColor());
         System.out.println("Preço: " + df.format(super.getPrice()));
-        if (super.isABS() == true)
+        if (super.getABS().toUpperCase(Locale.ROOT)
+                .toLowerCase(Locale.ROOT) == "sim")
             System.out.println("Tem ABS");
         else System.out.println("Não tem ABS");
         System.out.println("Categoria: " + super.getCategory());
